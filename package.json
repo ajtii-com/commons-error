@@ -27,14 +27,14 @@
     "_test": "cross-env NODE_ENV=testing   mocha --opts mocha.opts",
     "_pub": "npm publish",
     "_clean-out": "rimraf dist/",
-    "_git-push": "git push origin $1",
+    "_git-push": "git push origin",
     "lint": "tslint src/**/*.ts",
     "pretty": "prettier --write src/**/*.ts",
     "build": "yarn _clean-out && yarn _tsc-build && yarn _cp-types",
     "test": "yarn _clean-out && yarn _tsc-test && yarn _cp-types && yarn _test",
     "cov": "nyc   yarn test",
     "pub": "yarn test && yarn _pub",
-    "share": "yarn pretty && yarn lint && yarn test && yarn _git-push $1"
+    "share": "yarn pretty && yarn lint && yarn test && yarn _git-push"
   },
   "dependencies": {},
   "devDependencies": {
